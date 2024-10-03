@@ -41,8 +41,8 @@ jobs:
           python ./create_proxyip.py
           mv realip*.txt oldrealip/
           rm -rf ip.txt
-          rm -rf oldrealip/*.csv
-          rm -rf oldcsv/*.csv
+          rm oldrealip/*.txt
+          rm oldcsv/*.csv
       - name: Commit files
         run: |
           git config --local user.email "action@github.com"
