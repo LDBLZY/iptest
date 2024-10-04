@@ -34,7 +34,7 @@ jobs:
           cat IPDBproxy.txt >> ip.txt 
           mv IPDBproxy.txt oldrealip/IPDBproxy-$(date +%Y%m%d%H%M%S).txt
           chmod +x ./iptest.sh
-          bash ./iptest.sh -t 100
+          bash ./iptest.sh -t 100 -p 2096
           python ./df_sorted.py
           python ./create_proxyip.py
           mv realip*.txt oldrealip/
